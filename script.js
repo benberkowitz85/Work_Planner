@@ -15,3 +15,21 @@
   time = hours + ":" + minutes + ":" + seconds + " " + am_pm;
   $("#12HFormat").text(time);
 });
+
+//script for box highlighting//
+
+//saving on local server//
+const input = document.querySelector("input");
+const h2 = document.querySelector("textarea")
+
+h2.innerHTML = localStorage.getItem("value")
+
+input.addEventListener("keyup" , display)
+
+
+localStorage.setItem("KeyName" , input.value)
+
+function display() {
+  localStorage.setItem(value , input.value);
+  h2.innerHTML = localStorage.getItem("value")
+}
