@@ -7,7 +7,20 @@ header {
   font-size: large;
   font-family: 'Courier New', Courier, monospace;
   font-style: normal;
-  -moz-text-decoration-color: aqua;
+  background-color: #ff6961;
+  text-align: left;
+}
+
+section1 {
+font-family:'Times New Roman', Times, serif
+font-style: normal;
+text-align: center;
+}
+
+section2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  text-align: left;
 }
 
 textarea {
