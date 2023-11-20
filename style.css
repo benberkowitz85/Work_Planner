@@ -3,6 +3,13 @@ body {
   font-size: 16px;
 }
 
+header {
+  font-size: large;
+  font-family: 'Courier New', Courier, monospace;
+  font-style: normal;
+  -moz-text-decoration-color: aqua;
+}
+
 textarea {
   background: transparent;
   border: none;
