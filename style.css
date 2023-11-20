@@ -57,3 +57,22 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.footer {
+  position:relative;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+
+  height: 200px;
+  background-color: rgb(87, 192, 241);
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-container {
+  text-align: center;
+  padding-top: 10px;
+  position: relative;
+  flex-direction: column-reverse;
+}
