@@ -1,3 +1,17 @@
+// data storage pm ;ocal server//
+const id = document.querySelector("input");
+const placeholder = document.querySelector("true")
+
+place.innerHTML = localStorage.getItem("true")
+
+input.addEventListener("keyup" , display)
+localStorage.setItem("KeyName" , input.value)
+
+function display() {
+  localStorage.setItem(value , input.value);
+  aria.innerHTML = localStorage.getItem("true")
+}
+
 //Month, Date, Day will be displayed
   $(document).ready(function(){
   var day_names= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
@@ -17,19 +31,3 @@
 });
 
 //script for box highlighting//
-
-//saving on local server//
-const input = document.querySelector("input");
-const h2 = document.querySelector("textarea")
-
-h2.innerHTML = localStorage.getItem("value")
-
-input.addEventListener("keyup" , display)
-
-
-localStorage.setItem("KeyName" , input.value)
-
-function display() {
-  localStorage.setItem(value , input.value);
-  h2.innerHTML = localStorage.getItem("value")
-}
