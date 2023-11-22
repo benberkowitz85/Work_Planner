@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
   // display current date and time
@@ -9,8 +8,11 @@ $(document).ready(function () {
 
   displayTime.textContent = currentTime;
 
+  hourTracker();
+
   function hourTracker() {
     var currentHour = dayjs().hour();
+    
   
     // time block loop
     $(".time-block").each(function () {
@@ -32,12 +34,11 @@ $(document).ready(function () {
     });
   }
 
-  hourTracker();
 
-// receiver and display data off the local storage
+// receive and display data off the local storage
 function displayText() {
   $(".time-block").each(function () {
-    var blockHour = $(this).attr("id");
+    var blockHour = $(this).attr('id');
     $(this).children(".description").val(localStorage.getItem(blockHour));
   });
 }
@@ -53,9 +54,4 @@ $(".saveBtn").on("click", function () {
   localStorage.setItem(time, text);
 });
 
-//Clears site and  local storage
- $("#clearFieldsBtn").click(function(event) {
-    event.preventDefault;
-    $("textArea").val("");
-    localStorage.clear();
-});
+
