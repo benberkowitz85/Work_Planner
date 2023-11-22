@@ -13,9 +13,10 @@ header {
 }
 
 section1 {
-font-family:'Times New Roman', Times, serif
+font-family:'Times New Roman', Times, serif;
 font-style: normal;
 text-align: center;
+background-color: #06aed5;
 }
 
 section2 {

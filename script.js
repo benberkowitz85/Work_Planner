@@ -1,33 +1,56 @@
-//Month, Date, Day will be displayed
-$(document).ready(function(){
-  var day_names= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-  var date = new Date();
-  $("#currentDay").text("Today is: " + day_names[date.getDay()]);
-  var month_names = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
-  var date = new Date();
-  $("#dateFormat").text(date.getDate() + " " + month_names[date.getMonth()] + ", " + date.getFullYear());
-  var date = new Date();
-  var hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
-  var am_pm = date.getHours() >= 12 ? "PM" : "AM";
-  hours = hours < 10 ? "0" + hours : hours;
-  var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-  var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
-  time = hours + ":" + minutes + ":" + seconds + " " + am_pm;
-  $("#12HFormat").text(time);
+$(document).ready(function () {
+
+  // Create a variable and use query selector to display current date and time
+  var displayTime = document.querySelector("#currentDay");
+
+  // Use dayjs to display current date and time in given format
+  var currentTime = dayjs().format("dddd, MMMM D, YYYY, h:mm:ss a");
+
+  displayTime.textContent = currentTime;
+
+  // Set up a click listener for the saveBtn, capture the user input's row id, and store it in the local storage
+  $(".saveBtn").on("click", function () {
+    var text = $(this).siblings(".description").val();
+    var time = $(this).parent().attr("id");
+
+    // Save text in local storage
+    localStorage.setItem(time, text);
+  });
+
+  // keep track of time for past, present, and future
+  function hourTracker() {
+    var currentHour = dayjs().hour();
+  
+    // should block the boxes by tume
+    $(".time-block").each(function () {
+      var blockHour = parseInt($(this).attr("id").split("-")[1]);
+      if (blockHour < currentHour) {
+        $(this).addClass("past");
+      } else if (blockHour === currentHour) {
+        $(this).removeClass("past");
+        $(this).addClass("present");
+      } else {
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+        $(this).addClass("future");
+      }
+    });
+  }
+  hourTracker();
+
+// allows time blocks loop to display the local storage data
+function displayText() {
+  $(".time-block").each(function () {
+    var blockHour = $(this).attr("id");
+    $(this).children(".description").val(localStorage.getItem(blockHour));
+  });
+}
+displayText();
 });
 
-// data storage pm ;ocal server//
-const id = document.querySelector("input");
-const placeholder = document.querySelector("true")
-
-place.innerHTML = localStorage.getItem("true")
-
-input.addEventListener("keyup" , display)
-localStorage.setItem("KeyName" , input.value)
-
-function display() {
-  localStorage.setItem(value , input.value);
-  aria.innerHTML = localStorage.getItem("true")
-}
-
-//script for box highlighting//
+//deletes empty storage 
+ $("#clearFieldsBtn").click(function(event) {
+    event.preventDefault;
+    $("textArea").val("");
+    localStorage.clear();
+});
