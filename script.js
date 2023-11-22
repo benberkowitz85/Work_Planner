@@ -17,7 +17,7 @@ $(document).ready(function () {
     localStorage.setItem(time, text);
   });
 
-  // keep track of time for past, present, and future
+  // tracks time for past, present, and future
   function hourTracker() {
     var currentHour = dayjs().hour();
   
