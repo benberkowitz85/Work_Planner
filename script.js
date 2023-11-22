@@ -1,29 +1,24 @@
+
 $(document).ready(function () {
 
-  // Create a variable and use query selector to display current date and time
+  // display current date and time
   var displayTime = document.querySelector("#currentDay");
 
-  // Use dayjs to display current date and time in given format
+  // Date display for day.js
   var currentTime = dayjs().format("dddd, MMMM D, YYYY, h:mm:ss a");
 
   displayTime.textContent = currentTime;
 
-  // Set up a click listener for the saveBtn, capture the user input's row id, and store it in the local storage
-  $(".saveBtn").on("click", function () {
-    var text = $(this).siblings(".description").val();
-    var time = $(this).parent().attr("id");
-
-    // Save text in local storage
-    localStorage.setItem(time, text);
-  });
-
-  // tracks time for past, present, and future
   function hourTracker() {
     var currentHour = dayjs().hour();
   
-    // should block the boxes by tume
+    // time block loop
     $(".time-block").each(function () {
       var blockHour = parseInt($(this).attr("id").split("-")[1]);
+  
+      
+
+      // color bar for past and current hours, as of typing this, maybe one day the future
       if (blockHour < currentHour) {
         $(this).addClass("past");
       } else if (blockHour === currentHour) {
@@ -36,9 +31,10 @@ $(document).ready(function () {
       }
     });
   }
+
   hourTracker();
 
-// allows time blocks loop to display the local storage data
+// receiver and display data off the local storage
 function displayText() {
   $(".time-block").each(function () {
     var blockHour = $(this).attr("id");
@@ -48,7 +44,16 @@ function displayText() {
 displayText();
 });
 
-//deletes empty storage 
+// saves user input off the row id in l storeage
+$(".saveBtn").on("click", function () {
+  var text = $(this).siblings(".description").val();
+  var time = $(this).parent().attr("id");
+
+  // text remaining local storage
+  localStorage.setItem(time, text);
+});
+
+//Clears site and  local storage
  $("#clearFieldsBtn").click(function(event) {
     event.preventDefault;
     $("textArea").val("");
