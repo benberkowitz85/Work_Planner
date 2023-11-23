@@ -54,9 +54,17 @@ $(".saveBtn").on("click", function () {
   localStorage.setItem(time, text);
 });
 
-function deleteItems() {
-  localStorage.deleteItems();
-  localStorage.removeItem();
-  localStorage.clear();
+function DeleteItems() {
+  localStorage.removeItem("hour-9");
+  localStorage.removeItem("hour-10");
+  localStorage.removeItem("hour-11");
+  localStorage.removeItem("hour-12");
+  localStorage.removeItem("hour-1");
+  localStorage.removeItem("hour-2");
+  localStorage.removeItem("hour-3");
+  localStorage.removeItem("hour-4");
+  localStorage.removeItem("hour-5");
+
+  document.getElementById("item")
 }
 
