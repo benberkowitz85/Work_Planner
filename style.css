@@ -24,7 +24,7 @@ section2 {
 
 section3 {
   font-family: 'Times New Roman', Times, serif;
-  text-align: left;
+  text-align: center;
 }
 
 textarea {
@@ -61,7 +61,7 @@ textarea {
 }
 
 .past {
-  background-color: #e6e6f3;
+  background-color: #ec91d1;
   color: white;
 }
 
@@ -71,7 +71,7 @@ textarea {
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #6a0505;
   color: white;
 }
 

@@ -25,7 +25,6 @@
   <body>
     <header>
       <h1>Plan Ahead to Get Ahead</h1>
-    </header>
     <section1>
       <h4>"If you fail to plan, you plan to fail." - Taylor Swift <h4>
     </section1>
@@ -33,15 +32,17 @@
       <h4>With the help of my user friendly app, you will be able to visualize your day to day activies, keeping on task and on time. A messy house means a messy mind, this site is designed to fight the clutter that can easily overtake and overwhelm in a busy wotk environment. Our goal, our mantra is simple, Plan Ahead to Get Ahead.</h4>
      </section2>
      <section3>
-      <h2 id="currentDay" class="lead"></h2> <h2 id="dateFormat"></h2> <h2 id="12HFormat"></h2>
+      <h2 id="currentDay" class="lead" id="dateFormat" id="12HFormat"></h2>
     </section3>
+    
 
+  <div="Container">
   <div id="hour-9" class="row time-block">
         <div class="col-2 col-md-1 hour text-center py-3">9AM</div>
         <textarea class="col-8 col-md-10 description" rows="3" id="item" placeholder="Enter item..." ></textarea>
         <button class="btn saveBtn col-1 col-md-1" aria-label="save">Save
           <i class="fas fa-save" aria-hidden="true"></i>
-          <button class="fa fa-trash" onclick="DeleteItems()" id="item-9">Delete</button>
+          <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete & Refresh To See The Changes!</button>
         </button>
       </div>
 
@@ -50,14 +51,14 @@
         <textarea class="col-8 col-md-10 description" rows="3" id="item" placeholder="Enter item..."></textarea>
         <button class="btn saveBtn col-1 col-md-1" aria-label="save">Save
           <i class="fas fa-save" aria-hidden="true"></i>
-          <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete</button>
+          <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete & Refresh To See The Changes!</button>
       </div>
       <div id="hour-11" class="row time-block">
         <div class="col-2 col-md-1 hour text-center py-3">11AM</div>
         <textarea class="col-8 col-md-10 description" rows="3" id="item" placeholder="Enter item"></textarea>
         <button class="btn saveBtn col-1 col-md-1" aria-label="save">Save
           <i class="fas fa-save" aria-hidden="true"></i>
-          <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete</button>
+          <button class="fa fa-trash" onclick="DeleteItems()" id="item1">Delete & Refresh To See The Changes!</button>
       </div>
  
           <div id="hour-12" class="row time-block">
@@ -65,7 +66,7 @@
             <textarea class="col-8 col-md-10 description" rows="3" id="item" placeholder="Enter item..."></textarea>
             <button class="btn clearFieldsBtn col-1 col-md-1" aria-label="save">Save
               <i class="fas fa-save" aria-hidden="true"></i>
-              <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete</button>
+              <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete & Refresh To See The Changes!</button>
           </div>
 
       <div id="hour-1" class="row time-block">
@@ -73,7 +74,7 @@
         <textarea class="col-8 col-md-10 description" rows="3" id="item" placeholder="Enter item..."></textarea>
         <button class="btn saveBtn col-1 col-md-1" aria-label="save">Save
           <i class="fas fa-save" aria-hidden="true"></i>
-          <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete</button>
+          <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete & Refresh To See The Changes!</button>
       </div>
 
             <div id="hour-2" class="row time-block">
@@ -81,7 +82,7 @@
               <textarea class="col-8 col-md-10 description" rows="3" id="item" placeholder="Enter item..."></textarea>
               <button class="btn saveBtn col-1 col-md-1" aria-label="save">Save
                 <i class="fas fa-save" aria-hidden="true"></i>
-                <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete</button>
+                <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete & Refresh To See The Changes!</button>
             </div>
 
       <div id="hour-3" class="row time-block">
@@ -89,7 +90,7 @@
         <textarea class="col-8 col-md-10 description" rows="3" id="item" placeholder="Enter item..."></textarea>
         <button class="btn saveBtn col-1 col-md-1" aria-label="save">Save
           <i class="fas fa-save" aria-hidden="true"></i>
-          <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete</button>
+          <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete & Refresh To See The Changes!</button>
       </div>
 
             <div id="hour-4" class="row time-block">
@@ -97,16 +98,33 @@
               <textarea class="col-8 col-md-10 description" rows="3" id="item" placeholder="Enter item..."></textarea>
               <button class="btn saveBtn col-1 col-md-1" aria-label="save">Save
                 <i class="fas fa-save" aria-hidden="true"></i>
-                <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete</button>
+                <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete & Refresh To See The Changes!</button>
             </div>
 
-      <div id="hour-5" class="row time-block">
+      <div id="hour-5" class="row time-block future">
         <div class="col-2 col-md-1 hour text-center py-3">5PM</div>
         <textarea class="col-8 col-md-10 description" rows="3" id="item" placeholder="Enter item..."></textarea>
         <button class="btn saveBtn col-1 col-md-1" aria-label="save">Save
           <i class="fas fa-save" aria-hidden="true"></i>
-          <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete</button>
+          <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete & Refresh To See The Changes!</button>
     </div>
+
+    <div id="hour-9p" class="row time-block past">
+      <div class="col-2 col-md-1 hour text-center py-3">9PM</div>
+      <textarea class="col-8 col-md-10 description" rows="3" id="item" placeholder="Enter item..."></textarea>
+      <button class="btn saveBtn col-1 col-md-1" aria-label="save">Save
+        <i class="fas fa-save" aria-hidden="true"></i>
+        <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete & Refresh To See The Changes!</button>
+  </div>
+
+  <div id="hour-10p" class="row time-block past">
+    <div class="col-2 col-md-1 hour text-center py-3">10PM</div>
+    <textarea class="col-8 col-md-10 description" rows="3" id="item" placeholder="Enter item..."></textarea>
+    <button class="btn saveBtn col-1 col-md-1" aria-label="save">Save
+      <i class="fas fa-save" aria-hidden="true"></i>
+      <button class="fa fa-trash" onclick="DeleteItems()" id="item">Delete & Refresh To See The Changes!</button>
+</div>
+  
 
       <script src="script.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
