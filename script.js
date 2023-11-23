@@ -54,6 +54,7 @@ $(".saveBtn").on("click", function () {
   localStorage.setItem(time, text);
 });
 
+//remove text - ideally one at a time
 function DeleteItems() {
   localStorage.removeItem("hour-9");
   localStorage.removeItem("hour-10");
