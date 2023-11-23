@@ -53,5 +53,10 @@ $(".saveBtn").on("click", function () {
   // text remaining local storage
   localStorage.setItem(time, text);
 });
-
+(
+function deleteItems() {
+  localStorage.deleteItems();
+  localStorage.removeItem();
+  localStorage.clear();
+})
 
