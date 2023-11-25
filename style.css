@@ -8,7 +8,7 @@ header {
   font-size: large;
   font-family: 'Courier New', Courier, monospace;
   font-style: normal;
-  background-color: #ff6961;
+  background-color: #61efff;
   text-align: center;
 }
 
@@ -71,7 +71,7 @@ textarea {
 }
 
 .future {
-  background-color: #6a0505;
+  background-color: #5aa18e;
   color: white;
 }
 
@@ -101,13 +101,13 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-.footer {
+footer {
   position: relative;
   bottom: 0;
   width: 100%;
   z-index: -1;
   height: 160px;
-  background-color: rgb(87, 192, 241);
+  background-color: rgb(241, 190, 87);
   text-align: center;
   margin-top: 10px;
 }
